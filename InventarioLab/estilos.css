@@ -1,0 +1,24 @@
+:root { --fondo: #eef3f9; --tinta: #142840; --azul: #2459d3; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--tinta);
+  font-family: system-ui, sans-serif; line-height: 1.5; }
+main { max-width: 1120px; margin: auto; padding: 32px 20px; }
+header { background: #142840; color: white; padding: 28px;
+  border-radius: 20px; margin-bottom: 24px; }
+h1 { font-size: 2.8rem; margin: 0; } h2 { margin-top: 0; }
+.tarjeta { background: white; border-radius: 16px; padding: 24px;
+  margin-bottom: 20px; box-shadow: 0 8px 24px #1428400d; }
+form { display: grid; grid-template-columns: 1fr 2fr 1fr auto;
+  gap: 14px; align-items: end; }
+label { display: grid; gap: 6px; font-weight: 600; }
+input, button { font: inherit; padding: 10px 12px; border-radius: 8px; }
+input { min-width: 0; border: 1px solid #a4b3c5; }
+button { border: 0; background: var(--azul); color: white; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+:focus-visible { outline: 3px solid #ad6100; outline-offset: 3px; }
+.tabla { overflow-x: auto; } table { border-collapse: collapse; width: 100%; }
+caption { text-align: left; padding: 16px 0; }
+td, th { text-align: left; padding: 12px; border-bottom: 1px solid #dce4ef; }
+td button { margin: 3px; } #mensaje { min-height: 1.5em; }
+@media (max-width: 760px) { form { grid-template-columns: 1fr; }
+  main { padding: 16px 10px; } .tarjeta { padding: 16px; } }

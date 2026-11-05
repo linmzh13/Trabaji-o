@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabStock - Control de Inventario</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="modelo.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<main>
+  <header><p>INFORMÁTICA 2 / PRÁCTICA DE LABORATORIO</p>
+    <h1>LabStock</h1><p>Sistema de gestión de equipos de aprendizaje.</p></header>
+  <section class="tarjeta" aria-label="Resumen">
+    <h2>Estado general del inventario</h2><p id="resumen"></p>
+  </section>
+  <section class="tarjeta">
+    <h2>Nuevo registro de equipo</h2>
+    <form id="registro">
+      <label>Código<input name="codigo" required maxlength="20"></label>
+      <label>Nombre<input name="nombre" required maxlength="80"></label>
+      <label>Ubicación<input name="ubicacion" required maxlength="50" value="Laboratorio Central"></label>
+      <label>Total Unidades<input name="total" type="number" min="1" step="1" required></label>
+      <button>Registrar</button>
+    </form>
+    <p id="mensaje" role="status" aria-live="polite"></p>
+  </section>
+  <section class="tarjeta">
+    <label>Filtrar por código, nombre o ubicación<input id="busqueda" type="search"></label>
+    <div class="tabla"><table>
+      <caption>Listado de equipos y control operativo</caption>
+      <thead><tr><th>Código</th><th>Equipo</th><th>Ubicación</th><th>Total</th>
+        <th>Disponibles</th><th>Prestados</th><th>Acciones</th></tr></thead>
+      <tbody id="filas"></tbody>
+    </table></div>
+  </section>
+</main>
+</body>
+</html>
